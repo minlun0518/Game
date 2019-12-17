@@ -6,26 +6,24 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <Button
+    <ImageButton
         android:id="@+id/button_up"
-        style="@style/Widget.AppCompat.Button.Small"
         android:layout_width="97dp"
         android:layout_height="97dp"
         android:layout_marginTop="316dp"
-        android:background="@drawable/up"
         android:padding="10dp"
-        android:textColor="#FFFFFF"
         app:layout_constraintEnd_toStartOf="@+id/button_right"
         app:layout_constraintStart_toEndOf="@+id/button_left"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/up" />
 
-    <Button
+    <ImageButton
         android:id="@+id/button_left"
         android:layout_width="97dp"
         android:layout_height="97dp"
         android:layout_marginStart="40dp"
         android:layout_marginBottom="200dp"
-        android:background="@drawable/left"
+        app:srcCompat="@drawable/left"
         android:padding="10dp"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -33,26 +31,25 @@
         app:layout_constraintTop_toBottomOf="@+id/button_up"
         app:layout_constraintVertical_bias="0.47000003" />
 
-    <Button
+    <ImageButton
         android:id="@+id/button_right"
         android:layout_width="97dp"
         android:layout_height="97dp"
         android:layout_marginEnd="40dp"
         android:layout_marginBottom="208dp"
-        android:background="@drawable/right"
-        android:padding="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/button_left"
-        app:layout_constraintTop_toBottomOf="@+id/button_up" />
+        app:layout_constraintTop_toBottomOf="@+id/button_up"
+        app:srcCompat="@drawable/right" />
 
-    <Button
+    <ImageButton
         android:id="@+id/button_down"
         android:layout_width="97dp"
         android:layout_height="97dp"
         android:layout_marginBottom="108dp"
-        android:background="@drawable/down"
+        app:srcCompat="@drawable/down"
         android:padding="10dp"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
