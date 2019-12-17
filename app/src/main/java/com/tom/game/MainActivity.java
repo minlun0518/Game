@@ -14,51 +14,35 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Button bLeft =findViewById(R.id.button_left);
-        Button bRight =findViewById(R.id.button_right);
-        Button bUp =findViewById(R.id.button_up);
-        Button bDown =findViewById(R.id.button_down);
-/*
-有了 findViewById(R.id.button_left).setOnClickListener(this); 就不用了
-        bLeft.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
-
- */
-
+        findView();
     }
 
-    public void findView(View view){
+    public void findView (){
         findViewById(R.id.button_left).setOnClickListener(this);
         findViewById(R.id.button_right).setOnClickListener(this);
         findViewById(R.id.button_up).setOnClickListener(this);
         findViewById(R.id.button_down).setOnClickListener(this);
-
     }
 
-
-    public void left (View view){
-
-    }
-
-    public void right (View view){
-
-    }
-
-    public void up (View view){
-
-    }
-
-    public void down (View view){
-
-    }
 
     @Override
-    public void onClick(View v) {
+    public void onClick(View view) {
         Log.d("MainActivity","onClick");
+        switch (view.getId()){
+            case R.id.button_up:
+                Log.d("MainActivity","onClick.up");
+                break;
+            case R.id.button_down:
+                Log.d("MainActivity","onClick.down");
+                break;
+            case R.id.button_left:
+                Log.d("MainActivity","onClick.left");
+                break;
+            case R.id.button_right:
+                Log.d("MainActivity","onClick.right");
+                break;
+
+        }
 
     }
 }
