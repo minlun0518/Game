@@ -11,12 +11,14 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
+import android.widget.Toast;
 
 
 public class GameView extends View {
@@ -37,6 +39,31 @@ public class GameView extends View {
         Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.monday);
         canvas.drawBitmap(bitmap, posX, posY, paint0);
     }
+
+    public void moveRight(){
+        if(posX<getWidth()-500){
+            this.posX+=50;
+        }
+    }
+
+    public void moveLeft(){
+        if(posX>=0){
+            this.posX-=50;
+        }
+    }
+
+    public void moveUp(){
+        if(posY>=0){
+            this.posY-=50;
+        }
+    }
+    public void moveDown(){
+        if(posY<getHeight()-150-getResources().){
+            this.posY+=50;
+        }
+
+    }
+
 
     public float getPosX() {
 
